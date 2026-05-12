@@ -39,40 +39,6 @@ Built to run on a **free Google Colab T4 GPU** in under one hour.
 
 ---
 
-## 🛠 How It Works
-
-
-User query
-│
-▼
-┌─────────────────────────────────┐
-│ RAG Retriever (FAISS)           │
-│ – Embed query (MiniLM)          │
-│ – Search policy PDF chunks      │
-└─────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────┐
-│ Prompt construction             │
-│ System: policy context          │
-│ User: original question         │
-└─────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────┐
-│ Fine‑tuned Llama 3 8B (QLoRA)   │
-│ – 4‑bit quantised base          │
-│ – LoRA adapters from training   │
-└─────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────┐
-│ Response (grounded, helpful)    │
-└─────────────────────────────────┘
-```
-
----
-
 ## 🧪 Example Interactions
 
 **User:** *How many days do I have to return an item?*  
